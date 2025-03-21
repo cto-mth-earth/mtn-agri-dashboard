@@ -57,7 +57,7 @@ export default function StateComparisons() {
             {error}
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 mt-4">
             {states.map((state) => {
               // Format state name with proper capitalization (e.g., "BIHAR" to "Bihar")
               const formattedState = state
@@ -70,9 +70,9 @@ export default function StateComparisons() {
                 <Link
                   key={state}
                   href={`/state-comparisons/${toSlug(state)}`}
-                  className="block bg-white shadow-md rounded-lg border-t-2 border-t-mtn-green-800 hover:bg-green-50 transition duration-150"
+                  className="block bg-white shadow-md rounded-lg border-t-2 bg-green-50 border-t-mtn-green-800 hover:bg-green-200 transition duration-150"
                 >
-                  <div className="flex items-center justify-center h-20 p-4">
+                  <div className="flex items-center justify-center h-20 p-2">
                     <span className="text-mtn-green-800 font-medium text-center">
                       {formattedState}
                     </span>
